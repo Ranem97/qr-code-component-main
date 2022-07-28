@@ -1,0 +1,45 @@
+$backgroundColor: hsl(212, 45%, 89%);
+$cardColor: hsl(0, 0%, 100%);
+
+@mixin fontStyle($size, $weight, $line) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line;
+    letter-spacing: 0.5px;
+}
+
+body {
+    background-color: $backgroundColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 1px 2px 5px 1px rgba(0, 0, 0, .1);
+
+    .card-body {
+        padding: 0;
+        padding-bottom: 20px;
+    }
+
+    h5 {
+        @include fontStyle(18px, 700, 1.5);
+        padding-top: 20px;
+        padding-bottom: 10px;
+        margin: 0;
+    }
+
+    img {
+        border-radius: 10px;
+    }
+
+    p {
+        @include fontStyle(14px, 400, 1.5);
+    }
+}
